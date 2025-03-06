@@ -167,7 +167,7 @@ class Embed(commands.Cog):
                 tit = await ctx.bot.wait_for("message", timeout=30, check=chk)
                 chnl = tit.channel_mentions[0]
                 await chnl.send(embed=embed)
-                await ctx.send(embed=discord.Embed(title="<:olympus_tick:1227866641027698792> Success",
+                await ctx.send(embed=discord.Embed(title="<:tick_icons:1345041197483298856> Success",
                                                    description="Sent the embed message to the mentioned channel",
                                                    color=0x000000))
             except asyncio.TimeoutError:
@@ -180,10 +180,10 @@ class Embed(commands.Cog):
             await interaction.response.defer()
             await msg.delete()
 
-        button_send = Button(label="Send Embed",  emoji="<:olympus_ignore:1254106939693203467>", style=discord.ButtonStyle.success)
+        button_send = Button(label="Send Embed",  emoji="<:icons_error:1345041194467721327>", style=discord.ButtonStyle.success)
         button_send.callback = send_callback
 
-        button_delete = Button(label="Cancel Setup",  emoji="<:baseline_delete_white_24dp:1266955566870167572>", style=discord.ButtonStyle.danger)
+        button_delete = Button(label="Cancel Setup",  emoji="<:icon_cross:1345041135156072541>", style=discord.ButtonStyle.danger)
         button_delete.callback = delete_callback
 
         view = View(timeout=180)
@@ -197,8 +197,8 @@ class Embed(commands.Cog):
 
 
 """
-@Author: Sonu Jana
-    + Discord: me.sonu
-    + Community: https://discord.gg/odx (Olympus Development)
+@Author: Stxrz
+    + Discord: stxrzz.py
+    + Community: https://discord.gg/hjSV93j93j (Kranton Development)
     + for any queries reach out support or DM me.
 """
