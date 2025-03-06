@@ -186,8 +186,8 @@ class Games(Cog):
         await game.start(ctx)
 
 """
-@Author: Sonu Jana
-    + Discord: me.sonu
-    + Community: https://discord.gg/odx (Olympus Development)
+@Author: Stxrz
+    + Discord: stxrzz.py
+    + Community: https://discord.gg/hjSV93j93j (Kranton Development)
     + for any queries reach out Community or DM me.
 """
