@@ -53,7 +53,7 @@ class AutoReaction(commands.Cog):
     async def add(self, ctx, trigger: str, *, emojis: str):
         if len(trigger.split()) > 1:
             embed = discord.Embed(
-                title="<:olympus_cross:1227866668152393789> Invalid Trigger",
+                title="<:icon_cross:1345041135156072541> Invalid Trigger",
                 description="Triggers can only be one word.",
                 color=0x000000
             )
@@ -65,7 +65,7 @@ class AutoReaction(commands.Cog):
         emoji_list = re.findall(r"<a?:\w+:\d+>|[\u263a-\U0001f645]", emojis)
         if len(emoji_list) > 10:
             embed = discord.Embed(
-                title="<:olympus_cross:1227866668152393789> Too Many Emojis",
+                title="<:icon_cross:1345041135156072541>> Too Many Emojis",
                 description="You can only set up to **10** emojis per trigger.",
                 color=0x000000
             )
@@ -76,7 +76,7 @@ class AutoReaction(commands.Cog):
         triggers = await self.get_triggers(ctx.guild.id)
         if len(triggers) >= 10:
             embed = discord.Embed(
-                title="<:olympus_notify:1227866804630720565> Trigger Limit Reached",
+                title="<:icons_error:1345041194467721327> Trigger Limit Reached",
                 description="You can only set up to 10 triggers for auto-reactions in this guild.",
                 color=0x000000
             )
@@ -86,7 +86,7 @@ class AutoReaction(commands.Cog):
 
         if await self.trigger_exists(ctx.guild.id, trigger):
             embed = discord.Embed(
-                title="<:olympus_notify:1227866804630720565> Trigger Exists",
+                title="<:icons_error:1345041194467721327> Trigger Exists",
                 description=f"The trigger '{trigger}' already exists. Remove it before adding it again.",
                 color=0x000000
             )
@@ -100,7 +100,7 @@ class AutoReaction(commands.Cog):
             await db.commit()
 
         embed = discord.Embed(
-            title="<:olympus_tick:1227866641027698792> Trigger Added",
+            title="<:tick_icons:1345041197483298856> Trigger Added",
             description=f"Successfully added trigger '{trigger}' with emojis {', '.join(emoji_list)}.",
             color=0x000000
         )
@@ -118,7 +118,7 @@ class AutoReaction(commands.Cog):
     async def remove(self, ctx, trigger: str):
         if not await self.trigger_exists(ctx.guild.id, trigger):
             embed = discord.Embed(
-                title="<:olympus_cross:1227866668152393789> Trigger Not Found",
+                title="<:icon_cross:1345041135156072541> Trigger Not Found",
                 description=f"The trigger '{trigger}' does not exist.",
                 color=0x000000
             )
@@ -131,7 +131,7 @@ class AutoReaction(commands.Cog):
             await db.commit()
 
         embed = discord.Embed(
-            title="<:olympus_tick:1227866641027698792> Trigger Removed",
+            title="<:tick_icons:1345041197483298856> Trigger Removed",
             description=f"Successfully removed trigger '{trigger}'.",
             color=0x000000
         )
@@ -177,7 +177,7 @@ class AutoReaction(commands.Cog):
         triggers = await self.get_triggers(ctx.guild.id)
         if not triggers:
             embed = discord.Embed(
-                title="<:olympus_cross:1227866668152393789> No Triggers Set",
+                title="<:tick_icons:1345041197483298856> No Triggers Set",
                 description="There are no auto-reaction triggers set to reset.",
                 color=0x000000
             )
@@ -190,7 +190,7 @@ class AutoReaction(commands.Cog):
             await db.commit()
 
         embed = discord.Embed(
-            title="<:olympus_tick:1227866641027698792> All Triggers Reset",
+            title="<:tick_icons:1345041197483298856> All Triggers Reset",
             description="Successfully removed all auto-reaction triggers.",
             color=0x000000
         )
@@ -202,8 +202,7 @@ async def setup(bot):
     await bot.add_cog(AutoReaction(bot))
 
 """
-@Author: Sonu Jana
-    + Discord: me.sonu
-    + Community: https://discord.gg/odx (Olympus Development)
-    + for any queries reach out support or DM me.
-"""
+@Author: Stxrz
+    + Discord: stxrzz.py
+    + Community: https://discord.gg/hjSV93j93j (Kranton Development)
+    + for any queries reach out Community or DM me."""
