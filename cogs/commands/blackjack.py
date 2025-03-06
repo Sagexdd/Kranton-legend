@@ -216,8 +216,7 @@ class Blackjack(commands.Cog):
 
 
 """
-@Author: Sonu Jana
-    + Discord: me.sonu
-    + Community: https://discord.gg/odx (Olympus Development)
-    + for any queries reach out support or DM me.
-"""
+@Author: Stxrz
+    + Discord: stxrzz.py
+    + Community: https://discord.gg/hjSV93j93j (Kranton Development)
+    + for any queries reach out Community or DM me."""
