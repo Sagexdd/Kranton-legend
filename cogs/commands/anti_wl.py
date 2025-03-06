@@ -50,7 +50,7 @@ class Whitelist(commands.Cog):
         if ctx.guild.member_count < 2:
             embed = discord.Embed(
                 color=0x000000,
-                description="❌ | Your Server Doesn't Meet My 30 Member Criteria"
+                description="<:icon_cross:1345041135156072541> | Your Server Doesn't Meet My 30 Member Criteria"
             )
             return await ctx.send(embed=embed)
 
@@ -70,7 +70,7 @@ class Whitelist(commands.Cog):
 
         is_owner = ctx.author.id == ctx.guild.owner_id
         if not is_owner and not check:
-            embed = discord.Embed(title="<:olympus_cross:1227866668152393789> Access Denied",
+            embed = discord.Embed(title="<:icon_cross:1345041135156072541> Access Denied",
                 color=0x000000,
                 description="Only Server Owner or Extra Owner can Run this Command!"
             )
@@ -80,9 +80,9 @@ class Whitelist(commands.Cog):
             embed = discord.Embed(
                 color=0x000000,
                 description=(
-                    f"**{ctx.guild.name} Security Settings <:olympus_mod:1222789854987812964>\n"
+                    f"**{ctx.guild.name} Security Settings <a:antinuke:1345243426878394439>\n"
                     "Ohh No! looks like your server doesn't enabled Antinuke\n\n"
-                    "Current Status : <:disabled:1204107662392827904>\n\n"
+                    "Current Status : <:cm_off:1345295117082169354>\n\n"
                     f"To enable use `{prefix}antinuke enable` **"
                 )
             )
@@ -95,7 +95,7 @@ class Whitelist(commands.Cog):
                 title="__**Whitelist Commands**__",
                 description="**Adding a user to the whitelist means that no actions will be taken against them if they trigger the Anti-Nuke Module.**"
             )
-            embed.add_field(name="__**Usage**__", value=f"<:red_dot:1222796144996777995> `{prefix}whitelist @user/id`\n<:red_dot:1222796144996777995> `{prefix}wl @user`")
+            embed.add_field(name="__**Usage**__", value=f"<a:x_dot:1345324448491769877> `{prefix}whitelist @user/id`\n<a:x_dot:1345324448491769877> `{prefix}wl @user`")
             embed.set_thumbnail(url=ctx.bot.user.avatar.url)
             return await ctx.send(embed=embed)
 
@@ -106,7 +106,7 @@ class Whitelist(commands.Cog):
             data = await cursor.fetchone()
 
         if data:
-            embed = discord.Embed(title="<:olympus_cross:1227866668152393789> Error",
+            embed = discord.Embed(title="<:icon_cross:1345041135156072541> Error",
                 color=0x000000,
                 description=f"<@{member.id}> is already a whitelisted member, **Unwhitelist** the user and try again."
             )
@@ -146,27 +146,27 @@ class Whitelist(commands.Cog):
             title=ctx.guild.name,
             color=0x000000,
             description=(
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Ban**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Kick**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Prune**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Bot Add**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Server Update**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Member Update**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Channel Create**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Channel Delete**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Channel Update**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Role Create**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Role Delete**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Role Update**\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Mention** @everyone\n"
-                f"<:antinuke_cross1:1276219010781810799><:antinuke_tick2:1276215848687898785> : **Webhook Management**"
+                f"<:icon_cross:1345041135156072541> : **Ban**\n"
+                f"<:icon_cross:1345041135156072541> : **Kick**\n"
+                f"<:icon_cross:1345041135156072541> : **Prune**\n"
+                f"<:icon_cross:1345041135156072541> : **Bot Add**\n"
+                f"<:icon_cross:1345041135156072541> : **Server Update**\n"
+                f"<:icon_cross:1345041135156072541> : **Member Update**\n"
+                f"<:icon_cross:1345041135156072541> : **Channel Create**\n"
+                f"<:icon_cross:1345041135156072541> : **Channel Delete**\n"
+                f"<:icon_cross:1345041135156072541> : **Channel Update**\n"
+                f"<:icon_cross:1345041135156072541> : **Role Create**\n"
+                f"<:icon_cross:1345041135156072541> : **Role Delete**\n"
+                f"<:icon_cross:1345041135156072541> : **Role Update**\n"
+                f"<:icon_cross:1345041135156072541> : **Mention** @everyone\n"
+                f"<:icon_cross:1345041135156072541> : **Webhook Management**"
                 
             )
         )
         embed.add_field(name="**Executor**", value=f"<@!{ctx.author.id}>", inline=True)
         embed.add_field(name="**Target**", value=f"<@!{member.id}>", inline=True)
         embed.set_thumbnail(url=self.bot.user.avatar.url)
-        embed.set_footer(text=f"Developed by Olympus Development™")
+        embed.set_footer(text=f"Developed by Kranton Development™")
 
         msg = await ctx.send(embed=embed, view=view)
 
