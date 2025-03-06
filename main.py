@@ -40,17 +40,6 @@ TOKEN = os.getenv("TOKEN")
 async def on_ready():
     await client.wait_until_ready()
     
-    print("""
-           \033[1;35m
-
-        ____   ___  _   _ _   _ 
-       / ___| / _ \| \ | | | | |
-       \___ \| | | |  \| | | | |
-        ___) | |_| | |\  | |_| |
-       |____/ \___/|_| \_| \___/ 
-
-       \033[0m
-           """)
     print("Loaded & Online!")
     print(f"Logged in as: {client.user}")
     print(f"Connected to: {len(client.guilds)} guilds")
@@ -65,13 +54,13 @@ async def on_ready():
 
 @client.event
 async def on_command_completion(context: commands.Context) -> None:
-    if context.author.id == 1070619070468214824:
+    if context.author.id == 1328025198758461440:
         return
 
     full_command_name = context.command.qualified_name
     split = full_command_name.split("\n")
     executed_command = str(split[0])
-    webhook_url = "https://discord.com/api/webhooks/1252219587043528715/5x6f-jZoBajQ3mUVDnP2_ecd5yalg8ff_Stc2L9zxSuuVc51Hyihp4MKyIgXtThY91j7"
+    webhook_url = "https://discord.com/api/webhooks/1343426399133765754/zaj4_Na2wz-dy57OdPNSGF5lXp3yJaU32mVJDWv-Hrp5AVNehnh3knl2ZCLQ7B2Zz9gh"
     async with aiohttp.ClientSession() as session:
         webhook = discord.Webhook.from_url(webhook_url, session=session)
 
@@ -101,7 +90,7 @@ async def on_command_completion(context: commands.Context) -> None:
                     inline=False)
 
                 embed.timestamp = discord.utils.utcnow()
-                embed.set_footer(text="Olympus Development™ ❤️",
+                embed.set_footer(text="Kranton Development™ ❤️",
                                  icon_url=client.user.display_avatar.url)
 
                 
@@ -125,7 +114,7 @@ async def on_command_completion(context: commands.Context) -> None:
                     name="<:right:1244660443323306118> Command Executed By :",
                     value=f"{context.author} | ID: [{context.author.id}](https://discord.com/users/{context.author.id})",
                     inline=False)
-                embed1.set_footer(text=f"Powered by Olympus Development™",
+                embed1.set_footer(text=f"Powered by Kranton Development™",
                                   icon_url=client.user.display_avatar.url)
                 print("Sending embed1 to webhook...")
                 await webhook.send(embed=embed1)
@@ -143,7 +132,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return f"© Olympus Development 2024"
+    return f"© Kranton Development 2024"
 
 
 def run():
