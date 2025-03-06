@@ -89,7 +89,7 @@ class HelpCommand(commands.HelpCommand):
       return
 
     
-    embed = discord.Embed(description="<a:RedLoading:1246777916621197424> **Loading Help module...**", color=color)
+    embed = discord.Embed(description="<a:buffering:1347211646115905579> **Loading Help module...**", color=color)
     ok = await self.context.reply(embed=embed)          
     data = await getConfig(self.context.guild.id)
     prefix = data["prefix"]
@@ -103,10 +103,10 @@ class HelpCommand(commands.HelpCommand):
     embed = discord.Embed(
       title="", color=0x000000)
 
-    embed.add_field(name="📜 __**General Info:**__", value= f"🔴 Server Prefix:  **{prefix}** \n🔴 Total Commands: **{len(set(self.context.bot.walk_commands()))}**\n🔴 Total Slash Commands: **{slash}**\n🔴 **[Get Olympus](https://discord.com/oauth2/authorize?client_id=1144179659735572640&permissions=2113268958&scope=bot)** | **[Support](https://discord.com/invite/odx)**\n\n❓ __**How do you use me?**__\n>>> `{prefix}help <command/module>` to get more info regarding that command/module\nFor example: `{prefix}help antinuke`\n\n")
+    embed.add_field(name="<a:adi_God:1347192594928500837> __**General Info:**__", value= f"<a:x_dot:1345324448491769877> Server Prefix:  **{prefix}** \n<a:x_dot:1345324448491769877> Total Commands: **{len(set(self.context.bot.walk_commands()))}**\n<a:x_dot:1345324448491769877> Total Slash Commands: **{slash}**\n<a:x_dot:1345324448491769877> **[Get Kranton Prime](https://discord.com/oauth2/authorize?client_id=1330071725659918377&permissions=0&integration_type=0&scope=bot+applications.commands)** | **[Support](https://discord.gg/hjSV93j93j)**\n\n❓ __**How do you use me?**__\n>>> `{prefix}help <command/module>` to get more info regarding that command/module\nFor example: `{prefix}help antinuke`\n\n")
 
-    embed.add_field(name="⭐ __**My Features**__", value=">>> **50+ Systems, including:**\n 🛡️ Security\n 🚨 Automoderation\n 🔧 Utility\n 🎵 Music\n 🛠️ Moderation\n 🧩 Customrole\n 🎉 Giveaway\n 🎙️ Voice\n 🎮 Games\n 👋 Welcomer\n 🪩 Autoreact & responder\n 📋 Autorole & Invc\n 🎭 Fun & AI Image Gen\n   And much more!...")
-    embed.add_field(name="➡️ __**How to get help?**__", value=">>> ♨️ Use the Buttons, to swap the Pages\n♨️ Use the Menu to select all Help Pages, you want to display\n♨️ For any queries/help Contact the **[Support Team](https://discord.com/invite/odx).**")
+    embed.add_field(name="<a:x_diamonds:1345324901472407572> __**My Features**__", value=">>> <a:x_dot:1345324448491769877> **50+ Systems, including:**\n<a:antinuke:1345243426878394439> Security\n <:icons_mod:1345041156827779184>  Automoderation\n <:Settings1:1345041132391891036> Utility\n <:icons_music:1344640601429250050> Music\n <:icons_martillo:1343940961562136608> Moderation\n <:icons_pin:1345041172938358935> Customrole\n <a:A_Tada:1345804801392246896> Giveaway\n <:icons_mic:1343940996731240520> Voice\n <:icons_games:1345041169955950614> Games\n <:cx_Friend:1343921221397381193> Welcomer\n <:x_arrow:1343941354698309782> Autoreact & responder\n <:icons_list:1345041183172198460> Autorole & Invc\n <:sentry:1345041137592832023> Fun & AI Image Gen\n   And much more!...")
+    embed.add_field(name="<a:x_dot:1345324448491769877> __**How to get help?**__", value=">>> <a:x_dot:1345324448491769877> Use the Buttons, to swap the Pages\n<a:x_dot:1345324448491769877> Use the Menu to select all Help Pages, you want to display\n<a:x_dot:1345324448491769877> For any queries/help Contact the **[Support Team](https://discord.gg/hjSV93j93j).**")
     embed.set_footer(
       text=f"Requested By {self.context.author}",
       icon_url=self.context.author.avatar.url if self.context.author.avatar else self.context.author.default_avatar.url
