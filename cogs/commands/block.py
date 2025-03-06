@@ -48,7 +48,7 @@ class Block(commands.Cog):
       cursor = await db.execute('SELECT user_id FROM user_blacklist WHERE user_id = ?', (user.id,))
       if await cursor.fetchone():
         embed = discord.Embed(
-          title="<:olympus_cross:1227866668152393789> User Already Blacklisted",
+          title="<:icon_cross:1345041135156072541> User Already Blacklisted",
           description=f"{user.mention} is already blacklisted.",
           color=0x000000
         )
@@ -57,7 +57,7 @@ class Block(commands.Cog):
         await db.execute('INSERT INTO user_blacklist (user_id) VALUES (?)', (user.id,))
         await db.commit()
         embed = discord.Embed(
-          title="<:olympus_tick:1227866641027698792> User Blacklisted",
+          title="<:tick_icons:1345041197483298856> User Blacklisted",
           description=f"{user.mention} has been added to the blacklist.",
           color=0x000000
         )
@@ -70,7 +70,7 @@ class Block(commands.Cog):
       cursor = await db.execute('SELECT user_id FROM user_blacklist WHERE user_id = ?', (user.id,))
       if not await cursor.fetchone():
         embed = discord.Embed(
-          title="<:olympus_cross:1227866668152393789> User Not Blacklisted",
+          title="<:icon_cross:1345041135156072541> User Not Blacklisted",
           description=f"{user.mention} is not in the blacklist.",
           color=0x000000
         )
@@ -79,7 +79,7 @@ class Block(commands.Cog):
         await db.execute('DELETE FROM user_blacklist WHERE user_id = ?', (user.id,))
         await db.commit()
         embed = discord.Embed(
-          title="<:olympus_tick:1227866641027698792> User Unblacklisted",
+          title="<:tick_icons:1345041197483298856> User Unblacklisted",
           description=f"{user.mention} has been removed from the blacklist.",
           color=0x000000
         )
@@ -93,7 +93,7 @@ class Block(commands.Cog):
       rows = await cursor.fetchall()
       if not rows:
         embed = discord.Embed(
-          title="<:olympus_cross:1227866668152393789> No Blacklisted Users",
+          title="<:icon_cross:1345041135156072541> No Blacklisted Users",
           description="There are no users in the blacklist.",
           color=0x000000
         )
@@ -136,7 +136,7 @@ class Block(commands.Cog):
       cursor = await db.execute('SELECT guild_id FROM guild_blacklist WHERE guild_id = ?', (guild_id,))
       if await cursor.fetchone():
         embed = discord.Embed(
-          title="<:olympus_cross:1227866668152393789> Guild Already Blacklisted",
+          title="<:icon_cross:1345041135156072541> Guild Already Blacklisted",
           description=f"Guild with ID `{guild_id}` is already blacklisted.",
           color=0x000000
         )
@@ -145,7 +145,7 @@ class Block(commands.Cog):
         await db.execute('INSERT INTO guild_blacklist (guild_id) VALUES (?)', (guild_id,))
         await db.commit()
         embed = discord.Embed(
-          title="<:olympus_tick:1227866641027698792> Guild Blacklisted",
+          title="<:tick_icons:1345041197483298856> Guild Blacklisted",
           description=f"Guild with ID `{guild_id}` has been added to the blacklist.",
           color=0x000000
         )
@@ -158,7 +158,7 @@ class Block(commands.Cog):
       cursor = await db.execute('SELECT guild_id FROM guild_blacklist WHERE guild_id = ?', (guild_id,))
       if not await cursor.fetchone():
         embed = discord.Embed(
-          title="<:olympus_cross:1227866668152393789> Guild Not Blacklisted",
+          title="<:icon_cross:1345041135156072541> Guild Not Blacklisted",
           description=f"Guild with ID `{guild_id}` is not in the blacklist.",
           color=0x000000
         )
@@ -167,7 +167,7 @@ class Block(commands.Cog):
         await db.execute('DELETE FROM guild_blacklist WHERE guild_id = ?', (guild_id,))
         await db.commit()
         embed = discord.Embed(
-          title="<:olympus_tick:1227866641027698792> Guild Unblacklisted",
+          title="<:tick_icons:1345041197483298856>Guild Unblacklisted",
           description=f"Guild with ID `{guild_id}` has been removed from the blacklist.",
           color=0x000000
         )
@@ -182,7 +182,7 @@ class Block(commands.Cog):
       rows = await cursor.fetchall()
       if not rows:
         embed = discord.Embed(
-          title="<:olympus_cross:1227866668152393789> No Blacklisted Guilds",
+          title="<:icon_cross:1345041135156072541> No Blacklisted Guilds",
           description="There are no guilds in the blacklist.",
           color=0x000000
         )
@@ -211,8 +211,7 @@ class Block(commands.Cog):
 
 
 """
-@Author: Sonu Jana
-    + Discord: me.sonu
-    + Community: https://discord.gg/odx (Olympus Development)
-    + for any queries reach out support or DM me.
-"""
+@Author: Stxrz
+    + Discord: stxrzz.py
+    + Community: https://discord.gg/hjSV93j93j (Kranton Development)
+    + for any queries reach out Community or DM me."""
