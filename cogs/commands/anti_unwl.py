@@ -24,7 +24,7 @@ class Unwhitelist(commands.Cog):
         if ctx.guild.member_count < 2:
             embed = discord.Embed(
                 color=0x000000,
-                description="❌ | Your Server Doesn't Meet My 30 Member Criteria"
+                description="<:icon_cross:1345041135156072541> | Your Server Doesn't Meet My 30 Member Criteria"
             )
             return await ctx.send(embed=embed)
 
@@ -66,7 +66,7 @@ class Unwhitelist(commands.Cog):
                 title="__**Unwhitelist Commands**__",
                 description="**Removes user from whitelisted users which means that the antinuke module will now take actions on them if they trigger it.**"
             )
-            embed.add_field(name="__**Usage**__", value="<:cm_off:1345295117082169354> `unwhitelist @user/id`\n<:cm_off:1345295117082169354> `unwl @user`")
+            embed.add_field(name="__**Usage**__", value="<a:x_dot:1345324448491769877> `unwhitelist @user/id`\n<a:x_dot:1345324448491769877> `unwl @user`")
             return await ctx.send(embed=embed)
 
         async with self.db.execute(
