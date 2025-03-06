@@ -10,14 +10,14 @@ AI_NSFW_CONTENT_FILTER: true
 LANGUAGE: en 
 DEFAULT_INSTRUCTION: soniye 
 
-Discord: https://discord.gg/odx
+Discord: https://discord.gg/hjSV93j93j
 Github: https://github.com/sonujana26/Discord-AI-Chatbot
 
 TRIGGER:
   - chatbot
-  - olympus
+  - kranton
   - $
-  - olympus-ai
+  - kranton-ai
   - soniye 
 
 AUTO_SHARDING: true
@@ -26,7 +26,7 @@ DISABLE_PRESENCE: false
 PRESENCES:
   - How can I assist you?
   - Currently in {guild_count} guilds
-  - Support at https://discord.gg/olympusop
+  - Support at https://dsc.gg/kranton-hq
 
 
 BLACKLIST_WORDS: #changed to cogs/imagine.py
